@@ -1,0 +1,49 @@
+body {
+  background-image: url("media/pexels-ithalu-dominguez-907485.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  color: #491d7f;
+  font-family: "Merienda", cursive;
+}
+
+h2 {
+  color: #642ab6;
+  font-family: "Merienda", cursive;
+}
+p {
+  color: #7779ff;
+}
+
+h4 {
+  font-style: italic;
+}
+
+.wrapper {
+  display: block;
+  margin: 0 auto;
+}
+
+.mainweatherapp {
+  margin: 100px auto;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(9px);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  max-width: 1000px;
+}
+.weekcast {
+  margin-bottom: 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(9px);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  max-width: 110px;
+  display: block;
+}
+
