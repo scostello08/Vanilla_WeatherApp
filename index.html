@@ -18,12 +18,13 @@
       href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/cbe471eb57.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
   <body id="bg">
     <div class="container">
-        <div class="mainweatherapp justify-content-evenly align-items-center">
+        <div class="mainweatherapp justify-content-evenly align-items-center mt-5">
             <div class="row mt-4">
                     <div class="col text-center">
                         <h1 id="city"><strong>Cottage Grove</strong></h1>
@@ -42,7 +43,7 @@
                         class="form-control shadow-sm"
                         />
                     </div>
-                    <div class="col-3">
+                    <div id="search" class="col-3">
                         <input
                         type="submit"
                         value="Search"
@@ -57,11 +58,14 @@
                 </div>
             </form>
 
-                <div class="row mb-3 ps-5 ms-5 text-center">
-                    <div class="col-6">
-                        <br />
+                <div class="row mb-3 text-center">
+                    <div class="col-12">
                         <br />
                         <h2>Current Temperature</h2>
+                    </div>
+                </div>
+                 <div class="row mb-3  text-center">
+                    <div class="col-6">
                         <h3>
                         <i class="fa-solid fa-sun"></i><span id="temp"> 66</span
                         ><span class="units">
@@ -70,20 +74,25 @@
                         </span>
                         </h3>
                     </div>
-                    <div class="col-5 pt-5">
-                        <h2>
-                        Sunny
-                        </h2>
-                        <h3>
-                        Feels like 66°
-                        </h3>
+                    <div class="col-6">
+                        <ul>
+                            <li>
+                                Sunny
+                            </li>
+                            <li>
+                                Parcipitation: 0%
+                            </li>
+                            <li>
+                                Humidity: 73%
+                            </li>
+                            <li>
+                                Wind: 2 km/h
+                            </li>
+
+                        </ul>
                     </div>
                 </div>
-                <div class="row mt-4 mb-2 text-center">
-                    <div class="col">
-                        <h4>Expect partly sunny skies. The high will be 80°</h4>
-                    </div>
-                </div>
+
                 <div class="row ps-2 ms-2 pt-5 mb-2">
                     <div class="col">
                         <h1>7 Day Forcast</h1>
