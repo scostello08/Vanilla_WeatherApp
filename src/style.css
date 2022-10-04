@@ -90,7 +90,7 @@ text-decoration: none;
 }
 
 
-.weekcast {
+#forcast {
   margin-bottom: 30px;
   text-align: center;
   background: rgba(255, 255, 255, 0.5);
@@ -100,4 +100,16 @@ text-decoration: none;
   border: 1px solid rgba(255, 255, 255, 0.18);
   max-width: 110px;
   display: block;
+}
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
 }
