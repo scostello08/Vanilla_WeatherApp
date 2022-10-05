@@ -40,12 +40,11 @@ function formatDay(timestamp) {
 };
 
 function displayForecast(response) {
-   console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
-
-  let forecastHTML = `  <div class="justify-content-center d-flex justify-content-evenly row">`;
-  forcast.forEach(function (forecastDay, index) {
-    if (index < 6) {
+  let forecast = response.data.daily
+  let forecastHTML = `  <div class="row justify-content-center d-flex justify-content-evenly">`;
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 7) {
     forecastHTML =
       forecastHTML +
      `
@@ -96,7 +95,7 @@ function displayWeatherCondition(response) {
          `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
        );
        iconElement.setAttribute("alt", response.data.weather[0].description);
-
+  getForecast(response.data.coord)
 
 };
 
