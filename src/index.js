@@ -99,6 +99,9 @@ function displayWeatherCondition(response) {
          "src",
          `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
        );
+        fahrenheitTemperature = response.data.main.temp;
+        celciusTemperature = response.data.main.temp;
+
        iconElement.setAttribute("alt", response.data.weather[0].description);
   getForecast(response.data.coord)
 
@@ -128,17 +131,23 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 };
 
-function convertToFahrenheit(event) {
-event.preventDefault();
-let temperatureElement = document.querySelector("#temp");
-temperatureElement.innerHTML = 86;
+function convertToCelcius(event) {
+  event.preventDefault();
+  celciusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temp");
+  let celciusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
 };
 
-function convertToCelsius(event) {
- event.preventDefault();
- let temperatureElement = document.querySelector("#temp");
- temperatureElement.innerHTML = 29;
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  celciusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let temperatureElement = document.querySelector("#temp");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 };
+
 
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
@@ -150,9 +159,13 @@ searchForm.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector("#current-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
+let fahrenheitTemperature = null;
+let celciusTemperature = null;
+
+searchCity("New York");
+
+let celciusLink = document.querySelector("#celcius-link");
+celciusLink.addEventListener("click", convertToCelcius);
+
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
-searchCity("New York");
