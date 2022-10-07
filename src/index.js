@@ -164,7 +164,7 @@ let celciusTemperature = null;
 
 searchCity("New York");
 
-let celciusLink = document.querySelector("#celcius-link");
+let celciusLink = document.querySelector("#celsius-link");
 celciusLink.addEventListener("click", convertToCelcius);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
